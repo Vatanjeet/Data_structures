@@ -18,5 +18,16 @@ class CustomList:
         self.array[self.length] = value
         self.length += 1
 
+    def pop(self, index=None):
+        if self.length == 0:
+            return "Empty List"
+        if index is None:
+            index = self.length - 1
+        if 0 <= index < self.length:
+            item = self.array[index]
+            self.__delete_item(index)
+            return item
+        return "IndexError"
+
 cl = CustomList()
 cl.append(10)
