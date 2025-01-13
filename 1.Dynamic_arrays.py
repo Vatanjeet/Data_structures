@@ -29,5 +29,10 @@ class CustomList:
             return item
         return "IndexError"
 
+    def clear(self):
+        self.length = 0
+        self.capacity = 1
+        self.array = self.__create_array(self.capacity)
+
 cl = CustomList()
 cl.append(10)
