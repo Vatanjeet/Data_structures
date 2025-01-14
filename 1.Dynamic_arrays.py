@@ -28,7 +28,7 @@ class CustomList:
             self.__delete_item(index)
             return item
         return "IndexError"
-
+        
     def clear(self):
         self.length = 0
         self.capacity = 1
